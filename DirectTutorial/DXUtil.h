@@ -1,8 +1,26 @@
 #pragma once
 #include <d3d11.h>
 #include <DirectXColors.h>
+#include "dxerr.h"
 
 #pragma  comment(lib, "d3d11.lib")
+
+#ifdef _DEBUG 
+#ifndef HR
+#define HR(x) \
+{ \
+	HRESULT hr = x; \
+	if(FAILED(hr)) \
+	{ \
+		DXTraceW(__FILEW__, __LINE__, hr, L#x, TRUE); \
+	} \
+}
+#endif
+#else
+#ifndef HR
+#define  HR(x) x;
+#endif
+#endif
 
 namespace Memory
 {

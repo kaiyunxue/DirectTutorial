@@ -37,7 +37,7 @@ void TestApp::Render(float dt)
 {
 	m_pImmediateContext->ClearRenderTargetView(m_pRenderTargetView, DirectX::Colors::CornflowerBlue);
 
-	m_pSwapChain->Present(0, 0);
+	HR(m_pSwapChain->Present(0, 0));
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR cmdLine, int nShow)
