@@ -1,5 +1,4 @@
 #include "DXApp.h"
-
 namespace 
 {
 	//used to forward msgs to user defined proc function
@@ -17,7 +16,7 @@ DXApp::DXApp(HINSTANCE hInstance)
 	m_hAppWnd = NULL;
 	m_ClientWidth = 800;
 	m_ClientHeight = 600;
-	m_AppTitle = "Hello Direct x 3D and win 32!!";
+	m_AppTitle = "DirectX 11 Tutorial 03: Sprites and Fonts using DirectX Toolkit";
 	m_WindStyle = WS_OVERLAPPEDWINDOW;
 	g_pApp = this;
 
